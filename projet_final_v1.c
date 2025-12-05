@@ -226,10 +226,10 @@ int fact(int n) {
 polynome *developpement_limite(polynome *A, float a) {
   polynome *C = malloc(sizeof(polynome)); //Allocation mémoire
   if (!C) return NULL;
-  printf("A quel ordre voulez-vous faire votre DL : ");
-  int n;
-  scanf("%d ",&n);
-  int i;
+    printf("A quel ordre voulez-vous faire votre DL : ");
+    int n;
+    scanf("%d ",&n);
+    int i;
   for(i = 0; i<=n; i++) {
     C->coef[n-i] = evaluation_polynome(a,derivee_ordre_n(A,i))/fact(i);
   }
