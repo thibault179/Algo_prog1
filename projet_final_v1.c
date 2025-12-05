@@ -65,14 +65,14 @@ void afficher_polynome (polynome *A) {
 }
 
 float evaluation_polynome(float a, polynome *A) {
-  int i;
-  float S=0;
-  float puiss_a=1;
-  for (i = 0; i<=A->taille-1;i--) {
-    S+=A->coef[A->taille-1-i]*puiss_a;
-    puiss_a=puiss_a*a;
-  }
-  return S;
+int i;
+float S=0;
+float puiss_a=1;
+for (i = 0; i<=A->taille-1;i--) {
+S+=A->coef[A->taille-1-i]*puiss_a;
+puiss_a=puiss_a*a;
+}
+return S;
 }
 
 float application(polynome *A, float x) {
