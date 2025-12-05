@@ -147,21 +147,6 @@ polynome *produits_polynomes(polynome *A, polynome *B) {
 
 /* ==========Dérivation d'un polynôme========== */
 
-polynome *derivee_polynome_auxence(polynome *A) {
-    polynome *C = malloc(sizeof(polynome));
-    if (!C) return NULL;
-    if (A->taille <= 1) {
-        C->taille = 1;
-        C->coef[0] = 0;
-    } else {
-        C->taille = A->taille - 1;
-        for (int i = 0; i < C->taille; i++) {
-            C->coef[i] = A->coef[i+1] * (i+1);
-        }
-    }
-    return C;
-}
-
 polynome *derivee_polynome(polynome *A) {
   polynome *C = malloc(sizeof(polynome)); //Allocation mémoire
   if (!C) return NULL;
